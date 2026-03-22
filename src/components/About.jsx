@@ -11,7 +11,7 @@ export default function About() {
 				whileInView={{ opacity: 1, scale: 1, y: 0 }}
 				viewport={{ once: true, margin: "-100px" }}
 				transition={{ duration: 0.8 }}
-				className="text-left bg-[#02080a] border-l-4 border-cyan-400 border-t border-r border-b border-white/10 p-10 md:p-16 shadow-[0_20px_50px_rgba(34,211,238,0.15)] rounded-2xl relative overflow-hidden"
+				className="text-left bg-[#02080a] border-l-4 border-cyan-400 border-t border-r border-b border-white/10 p-6 sm:p-10 md:p-16 shadow-[0_20px_50px_rgba(34,211,238,0.15)] rounded-2xl relative overflow-hidden"
 			>
 				<div className="absolute top-0 right-0 w-48 h-48 bg-cyan-400/20 blur-[60px] pointer-events-none" />
 
@@ -26,17 +26,21 @@ export default function About() {
 					<div className="w-full md:w-2/3 space-y-6">
 						<p className="text-lg md:text-xl text-white/80 leading-relaxed border-l-2 px-6 border-cyan-400/30 font-medium">
 							I am <strong className="text-cyan-400">Ritesh Sharma</strong>, a
-							Full Stack Web Developer passionate about building robust,
-							scalable MERN applications and mastering algorithms. I strive to
-							write clean code, handle complex data securely, and deliver
-							impactful digital experiences that leave a lasting impression.
+							Full Stack Developer focused on building scalable, real-time web
+							applications using the MERN stack. I’ve developed systems like a
+							real-time food ordering platform with WebSocket-based tracking and
+							a WebRTC video communication app, working hands-on with
+							performance optimization, system reliability, and clean backend
+							architecture.
 						</p>
 
 						<p className="text-lg md:text-xl text-white/80 leading-relaxed border-l-2 px-6 border-cyan-400/30 font-medium">
-							From crafting highly responsive UI components with React and
-							Tailwind to engineering low-latency WebSocket signaling servers,
-							my goal is always to bridge the gap between complex engineering
-							and beautiful design.
+							I specialize in creating responsive interfaces with React and
+							Tailwind while engineering robust backend systems using Node.js,
+							Express, and secure authentication mechanisms. My approach is
+							practical and problem-driven — I focus on building efficient,
+							maintainable solutions that handle real-world complexity rather
+							than just visually appealing interfaces.
 						</p>
 					</div>
 

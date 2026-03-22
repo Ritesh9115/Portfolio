@@ -1,0 +1,55 @@
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/About.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/Contact.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/Hero.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/Modal.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/MotionBackground.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/Navbar.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/Parallax3DBackground.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/ParallaxBackground.jsx
+   2:10  error    'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+  29:5   warning  Compilation Skipped: Inline `class` declarations are not supported
+
+Move class declarations outside of components/hooks.
+
+  27 |     const neonCyan = "rgba(34, 211, 238, {alpha})"; // cyan-400
+  28 |
+> 29 |     class Particle {
+     |     ^^^^^^^^^^^^^^^^
+> 30 |       constructor(x, y, dx, dy, size) {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |         this.x = x;
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 74 |       }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 75 |     }
+     | ^^^^^^ Inline `class` declarations are not supported
+  76 |
+  77 |     const init = () => {
+  78 |       particles = [];
+
+  react-hooks/unsupported-syntax
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/Projects.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/riteshsharma/Coding/portfolio/portfolio/src/components/Resume.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 11 problems (10 errors, 1 warning)
+

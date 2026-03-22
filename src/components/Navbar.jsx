@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCloudUploadAlt, FaFileDownload } from "react-icons/fa";
+import { FaCloudUploadAlt, FaFileDownload, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
     { name: "About Me", href: "#about" },
@@ -22,10 +23,10 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-50 flex justify-center py-6 pointer-events-none"
       >
         <div className="pointer-events-auto flex items-center justify-between px-6 py-3 mx-4 rounded-full bg-[#02080a]/80 border border-white/10 backdrop-blur-md shadow-[0_0_20px_rgba(34,211,238,0.15)] w-full max-w-5xl">
-          <ul className="flex items-center space-x-4 md:space-x-8">
+          <ul className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <li key={item.name}>
-                <a href={item.href} className="text-[10px] md:text-sm font-black uppercase tracking-widest text-white/70 hover:text-cyan-400 hover:shadow-[0_0_10px_rgba(34,211,238,0.5)] transition-all drop-shadow-md">
+                <a href={item.href} className="text-sm font-black uppercase tracking-widest text-white/70 hover:text-cyan-400 hover:shadow-[0_0_10px_rgba(34,211,238,0.5)] transition-all drop-shadow-md">
                   {item.name}
                 </a>
               </li>
@@ -33,15 +34,54 @@ export default function Navbar() {
           </ul>
 
           <button 
+            className="md:hidden text-cyan-400 text-2xl hover:text-cyan-300 transition-colors"
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <FaBars />
+          </button>
+
+          <button 
             onClick={() => setIsResumeModalOpen(true)}
-            className="ml-4 px-4 py-2 bg-cyan-400 hover:bg-cyan-300 text-black text-[10px] md:text-sm font-black uppercase tracking-widest rounded-full transition-all shadow-[0_0_15px_rgba(34,211,238,0.4)] whitespace-nowrap"
+            className="ml-4 px-4 py-2 bg-cyan-400 hover:bg-cyan-300 text-black text-xs md:text-sm font-black uppercase tracking-widest rounded-full transition-all shadow-[0_0_15px_rgba(34,211,238,0.4)] whitespace-nowrap"
           >
             View CV
           </button>
         </div>
       </motion.nav>
 
-      {/* Resume Upload / View Modal */}
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 z-[60] bg-[#02080a]/95 backdrop-blur-xl flex flex-col items-center pt-32 px-6"
+          >
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-8 right-8 text-white/70 hover:text-cyan-400 text-3xl font-bold transition-colors"
+            >
+              <FaTimes />
+            </button>
+            <ul className="flex flex-col items-center space-y-8 w-full">
+              {navItems.map((item) => (
+                <li key={item.name} className="w-full text-center">
+                  <a 
+                    href={item.href} 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-2xl font-black uppercase tracking-widest text-white hover:text-cyan-400 transition-colors py-2 border-b border-white/5"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Resume View Modal */}
       <AnimatePresence>
         {isResumeModalOpen && (
           <motion.div 

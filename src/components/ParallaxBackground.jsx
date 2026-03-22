@@ -1,6 +1,56 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
+const neonCyan = "rgba(34, 211, 238, {alpha})"; // cyan-400
+
+class Particle {
+  constructor(x, y, dx, dy, size) {
+    this.x = x;
+    this.y = y;
+    this.dx = dx;
+    this.dy = dy;
+    this.size = size;
+    this.baseZ = Math.random() * 3 + 1;
+  }
+
+  draw(ctx) {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+    ctx.fillStyle = neonCyan.replace("{alpha}", "0.9");
+    ctx.shadowBlur = 12;
+    ctx.shadowColor = neonCyan.replace("{alpha}", "1");
+    ctx.fill();
+    ctx.shadowBlur = 0; 
+  }
+
+  update(ctx, canvas, mouse) {
+    if (this.x > canvas.width || this.x < 0) this.dx = -this.dx;
+    if (this.y > canvas.height || this.y < 0) this.dy = -this.dy;
+
+    let targetX = this.x;
+    let targetY = this.y;
+
+    if (mouse.x && mouse.y) {
+      const mdx = mouse.x - canvas.width / 2;
+      const mdy = mouse.y - canvas.height / 2;
+      
+      targetX += (mdx * this.baseZ) * -0.015;
+      targetY += (mdy * this.baseZ) * -0.015;
+    }
+
+    this.x += this.dx;
+    this.y += this.dy;
+
+    ctx.beginPath();
+    ctx.arc(targetX, targetY, this.size, 0, Math.PI * 2, false);
+    ctx.fillStyle = neonCyan.replace("{alpha}", "0.9");
+    ctx.shadowBlur = 12;
+    ctx.shadowColor = neonCyan.replace("{alpha}", "1");
+    ctx.fill();
+    ctx.shadowBlur = 0;
+  }
+}
+
 export default function ParallaxBackground() {
   const canvasRef = useRef(null);
 
@@ -23,56 +73,7 @@ export default function ParallaxBackground() {
       mouse.y = e.y;
     });
 
-    // Strictly Cyan
-    const neonCyan = "rgba(34, 211, 238, {alpha})"; // cyan-400
-
-    class Particle {
-      constructor(x, y, dx, dy, size) {
-        this.x = x;
-        this.y = y;
-        this.dx = dx;
-        this.dy = dy;
-        this.size = size;
-        this.baseZ = Math.random() * 3 + 1;
-      }
-
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = neonCyan.replace("{alpha}", "0.9");
-        ctx.shadowBlur = 12;
-        ctx.shadowColor = neonCyan.replace("{alpha}", "1");
-        ctx.fill();
-        ctx.shadowBlur = 0; 
-      }
-
-      update() {
-        if (this.x > canvas.width || this.x < 0) this.dx = -this.dx;
-        if (this.y > canvas.height || this.y < 0) this.dy = -this.dy;
-
-        let targetX = this.x;
-        let targetY = this.y;
-
-        if (mouse.x && mouse.y) {
-          const mdx = mouse.x - canvas.width / 2;
-          const mdy = mouse.y - canvas.height / 2;
-          
-          targetX += (mdx * this.baseZ) * -0.015;
-          targetY += (mdy * this.baseZ) * -0.015;
-        }
-
-        this.x += this.dx;
-        this.y += this.dy;
-
-        ctx.beginPath();
-        ctx.arc(targetX, targetY, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = neonCyan.replace("{alpha}", "0.9");
-        ctx.shadowBlur = 12;
-        ctx.shadowColor = neonCyan.replace("{alpha}", "1");
-        ctx.fill();
-        ctx.shadowBlur = 0;
-      }
-    }
+    // Particle class has been moved outside the component
 
     const init = () => {
       particles = [];
@@ -120,7 +121,7 @@ export default function ParallaxBackground() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
+        particles[i].update(ctx, canvas, mouse);
       }
       connect();
       animationFrameId = requestAnimationFrame(animate);

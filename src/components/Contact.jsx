@@ -73,7 +73,7 @@ export default function Contact() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col items-start justify-between p-8 bg-[#010405] border border-white/10 hover:border-cyan-400 transition-all duration-300 overflow-hidden shadow-[0_10px_30px_rgba(34,211,238,0.05)] rounded-2xl"
+                className="group relative flex flex-col items-start justify-between p-6 sm:p-8 bg-[#010405] border border-white/10 hover:border-cyan-400 transition-all duration-300 overflow-hidden shadow-[0_10px_30px_rgba(34,211,238,0.05)] rounded-2xl"
               >
                 <div className="absolute top-0 left-0 w-full h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 z-20" />
                 <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/10 rounded-full blur-[50px] group-hover:bg-cyan-500/20 transition-all" />

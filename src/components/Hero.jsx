@@ -23,7 +23,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, type: "spring", damping: 20 }}
-            className="text-6xl md:text-8xl lg:text-[9rem] font-black tracking-tighter text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] leading-none"
+            className="text-5xl sm:text-6xl md:text-8xl lg:text-[9rem] font-black tracking-tighter text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] leading-none"
           >
             RITESH
           </motion.h1>
@@ -31,20 +31,25 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.7, type: "spring", damping: 20 }}
-            className="text-6xl md:text-8xl lg:text-[9rem] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-cyan-200 to-cyan-500 drop-shadow-[0_0_30px_rgba(34,211,238,0.5)] leading-none -mt-2 md:-mt-6"
+            className="text-5xl sm:text-6xl md:text-8xl lg:text-[9rem] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-cyan-200 to-cyan-500 drop-shadow-[0_0_30px_rgba(34,211,238,0.5)] leading-none -mt-2 md:-mt-6"
           >
             SHARMA
           </motion.h1>
         </div>
 
-        <motion.p 
+        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="text-lg md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto font-medium tracking-wide bg-black/40 py-4 px-6 border-l-4 border-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.15)] backdrop-blur-md rounded-r-lg"
+          className="mb-12 max-w-3xl mx-auto bg-black/40 p-6 sm:p-8 border-l-4 border-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.15)] backdrop-blur-md rounded-r-lg flex flex-col gap-2"
         >
-          Full Stack Web Developer & Software Engineer.
-        </motion.p>
+          <p className="text-lg md:text-2xl text-white/80 font-medium tracking-wide">
+            Full Stack Web Developer & Software Engineer.
+          </p>
+          <p className="text-sm md:text-lg text-cyan-400/90 font-medium tracking-wide text-left md:text-center">
+            Building scalable, real-time web applications with React, Node.js, and modern web technologies.
+          </p>
+        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

@@ -173,7 +173,7 @@ export default function Resume() {
 
 			<div className="grid lg:grid-cols-2 gap-12 mb-16">
 				{/* Skills Column */}
-				<div className="space-y-8 bg-[#02080a] border border-white/5 p-8 shadow-[0_10px_30px_rgba(34,211,238,0.05)] rounded-2xl relative overflow-hidden">
+				<div className="space-y-8 bg-[#02080a] border border-white/5 p-6 md:p-8 shadow-[0_10px_30px_rgba(34,211,238,0.05)] rounded-2xl relative overflow-hidden">
 					<div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 blur-[50px]" />
 					<h3 className="text-2xl font-black text-white pb-4 uppercase tracking-wide border-b border-white/10 relative z-10">
 						Core Skills
@@ -204,7 +204,7 @@ export default function Resume() {
 
 				{/* Credentials / Education Column */}
 				<div className="space-y-8">
-					<div className="bg-[#02080a] border border-white/5 p-8 shadow-[0_10px_30px_rgba(34,211,238,0.05)] rounded-2xl h-full relative overflow-hidden">
+					<div className="bg-[#02080a] border border-white/5 p-6 md:p-8 shadow-[0_10px_30px_rgba(34,211,238,0.05)] rounded-2xl h-full relative overflow-hidden">
 						<div className="absolute bottom-0 right-0 w-48 h-48 bg-cyan-500/10 blur-[60px]" />
 						<h3 className="text-2xl font-black text-white pb-4 uppercase tracking-wide border-b border-white/10 mb-8 relative z-10">
 							Education
@@ -241,7 +241,7 @@ export default function Resume() {
 			{/* Certifications Section (Full Width Grid) */}
 			<div
 				id="certificates"
-				className="bg-[#02080a] border border-white/5 p-8 md:p-12 shadow-[0_10px_30px_rgba(34,211,238,0.05)] rounded-2xl relative overflow-hidden"
+				className="bg-[#02080a] border border-white/5 p-6 md:p-12 shadow-[0_10px_30px_rgba(34,211,238,0.05)] rounded-2xl relative overflow-hidden"
 			>
 				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500/5 via-transparent to-transparent pointer-events-none" />
 				<h3 className="text-3xl font-black text-white pb-6 uppercase tracking-wide border-b border-white/10 mb-10 text-center relative z-10">
@@ -308,7 +308,7 @@ export default function Resume() {
 							initial={{ scale: 0.95, y: 20, opacity: 0 }}
 							animate={{ scale: 1, y: 0, opacity: 1 }}
 							exit={{ scale: 0.95, y: 20, opacity: 0 }}
-							className="bg-[#02080a] border-2 border-cyan-500 p-10 rounded-2xl max-w-lg w-full shadow-[0_0_50px_rgba(34,211,238,0.3)] relative"
+							className="bg-[#02080a] border-2 border-cyan-500 p-6 md:p-10 rounded-2xl max-w-lg w-full shadow-[0_0_50px_rgba(34,211,238,0.3)] relative"
 							onClick={(e) => e.stopPropagation()}
 						>
 							<button
@@ -376,7 +376,7 @@ export default function Resume() {
 							initial={{ scale: 0.95, y: 20, opacity: 0 }}
 							animate={{ scale: 1, y: 0, opacity: 1 }}
 							exit={{ scale: 0.95, y: 20, opacity: 0 }}
-							className="bg-[#02080a] border-2 border-cyan-500 p-8 md:p-10 rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-[0_0_50px_rgba(34,211,238,0.3)] relative"
+							className="bg-[#02080a] border-2 border-cyan-500 p-6 md:p-10 rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-[0_0_50px_rgba(34,211,238,0.3)] relative"
 							onClick={(e) => e.stopPropagation()}
 						>
 							<button
