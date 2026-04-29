@@ -74,7 +74,7 @@ export default function Resume() {
 			degree: "Bachelor of Technology - CSE",
 			school: "Lovely Professional University",
 			date: "2023 - Present",
-			grade: "CGPA: 7.84",
+			grade: "CGPA: 8.07",
 		},
 		{
 			degree: "Intermediate (12th Grade)",
@@ -99,6 +99,14 @@ export default function Resume() {
 			image: "/assets/certificates/cloud-computing.png",
 			desc: "A comprehensive course covering the foundational concepts, architecture, and deployment models of cloud computing, along with resource management and security.",
 		},
+		{
+	title: "OCI AI Foundations Associate",
+	issuer: "Oracle",
+	date: "2026",
+	link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=YOUR_BADGE_ID",
+	image: "/assets/certificates/oci-ai.png",
+	desc: "Covers foundational concepts of Artificial Intelligence and Machine Learning on Oracle Cloud Infrastructure, including AI services, data handling, model training basics, and real-world cloud-based AI applications.",
+},
 		{
 			title: "Full-Stack Development Training (MERN)",
 			issuer: "CipherSchools",
