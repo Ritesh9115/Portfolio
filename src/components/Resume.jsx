@@ -139,14 +139,14 @@ export default function Resume() {
 			image: "/assets/certificates/ai-nocode.png",
 			desc: "A project-based course teaching how to integrate and build AI-powered applications without writing complex code, utilizing modern no-code platforms.",
 		},
-		{
-			title: "ChatGPT Made Easy: AI Essentials",
-			issuer: "Udemy",
-			date: "August 2025",
-			link: "https://ude.my/UC-a21505a5-529d-46df-9eb8-21d1cc6e4cb2",
-			image: "/assets/certificates/chatgpt-made-easy.png",
-			desc: "A quick-start guide to understanding the basics of ChatGPT, including how to structure queries and leverage AI for daily productivity tasks.",
-		},
+		// {
+		// 	title: "ChatGPT Made Easy: AI Essentials",
+		// 	issuer: "Udemy",
+		// 	date: "August 2025",
+		// 	link: "https://ude.my/UC-a21505a5-529d-46df-9eb8-21d1cc6e4cb2",
+		// 	image: "/assets/certificates/chatgpt-made-easy.png",
+		// 	desc: "A quick-start guide to understanding the basics of ChatGPT, including how to structure queries and leverage AI for daily productivity tasks.",
+		// },
 		{
 			title: "Computational Theory & Automata",
 			issuer: "Infosys Springboard",
